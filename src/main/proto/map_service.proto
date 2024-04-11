@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package mapservicedemo;
+
+service MapService {
+  rpc UpdatePosition (PositionUpdateRequest) returns (PositionUpdateReply) {}
+  rpc GetPositions (GetPositionsRequest) returns (stream PositionUpdateReply) {}
+}
+
+message PositionUpdateRequest {
+  string userId = 1;
+  float latitude = 2;
+  float longitude = 3;
+}
+
+message GetPositionsRequest {
+  string userId = 1;
+}
+
+message PositionUpdateReply {
+  repeated UserPosition positions = 1;
+}
+
+message UserPosition {
+  string userId = 1;
+  float latitude = 2;
+  float longitude = 3;
+}
