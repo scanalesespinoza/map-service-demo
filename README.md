@@ -99,4 +99,4 @@ If you want to learn more about building native executables, please consult http
 Contributions to the project are welcome. Please follow the standard fork and pull request workflow.
 
 ## License
-Specify your project's license here.
+[Apache License 2.0](LICENSE)
